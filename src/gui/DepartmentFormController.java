@@ -65,7 +65,7 @@ public class DepartmentFormController implements Initializable {
 			throw new IllegalStateException("Entity was null");
 		}
 		if(service == null) {
-			throw new IllegalStateException("Sercice was null");
+			throw new IllegalStateException("Service was null");
 		}
 		try {
 			entity = getFormData();
@@ -77,7 +77,7 @@ public class DepartmentFormController implements Initializable {
 			setErrorMessages(e.getErrors());
 		}
 		catch(DbException e ) {
-			Alerts.showAlert("Erroe saving object", null, e.getMessage(), AlertType.CONFIRMATION);
+			Alerts.showAlert("Error saving object", null, e.getMessage(), AlertType.CONFIRMATION);
 		}
 		
 	}
